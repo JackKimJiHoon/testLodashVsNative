@@ -1,12 +1,13 @@
 {
-  "name": "test",
+  "name": "testLodashVsNative",
   "version": "1.0.0",
-  "description": "",
+  "description": "testing performance",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test.js"
   },
-  "author": "",
+  "author": "mythofleader",
+  "email" : "mythofleader@gmail.com",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.2",
