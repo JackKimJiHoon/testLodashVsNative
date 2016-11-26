@@ -1,15 +1,16 @@
 {
-  "name": "testLodashVsNative",
+  "name": "testNativeVSlibrary",
   "version": "1.0.0",
   "description": "testing performance",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test.js"
+    "test": "node_modules/.bin/mocha $(find ./test -name '*.js')"
   },
   "author": "mythofleader",
-  "email" : "mythofleader@gmail.com",
+  "email": "mythofleader@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
     "lodash": "^4.17.2",
     "mocha": "^3.2.0"
   }
