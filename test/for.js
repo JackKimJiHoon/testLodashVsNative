@@ -3,18 +3,29 @@
 var test = require('./index');
 
 
-describe('test forloop', function () {
-  it('test for performance', function () {
+describe('test forLoop performance', function () {
+  it('simple for test', function () {
+    var testCases = test.getTestCases();
+
+    console.time('forLoopSimple');
+    for (var i = 0; i < test.LIMIT; i++) {
+      var content = testCases[i].content;
+      var id = testCases[i].id
+    }
+    console.timeEnd('forLoopSimple');
+  });
+
+  it('return new data', function () {
     var testCases = test.getTestCases();
     var results = [];
 
-    console.time('forloop');
+    console.time('forLoopReturn');
     for (var i = 0; i < test.LIMIT; i++) {
       results.push({
         content: testCases[i].content,
         id: testCases[i].id
       });
     }
-    console.timeEnd('forloop');
+    console.timeEnd('forLoopReturn');
   });
 });
